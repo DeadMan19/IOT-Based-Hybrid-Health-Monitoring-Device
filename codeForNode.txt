@@ -1,0 +1,23 @@
+
+const lists = document.querySelector('list');
+const products=document.querySelector('product');
+const qtys=document.querySelector('qty');
+
+form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    const productInput=products.element.product;
+    const qtyInput=qtys.element.qty;
+    addPandQ(productInput.value,qtyInput.value);
+    productInput.value="";
+    qtyInput.value="";
+    
+})
+
+const addPandQ =(producti,qtyi)=>{
+    const ele=document.createElement('LI');
+    const prt=`(${qtyi} ${producti})`;
+	ele.append(prt);
+	lists.append(ele);
+}
+
+
